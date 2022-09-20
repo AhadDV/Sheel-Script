@@ -1,6 +1,6 @@
 #!/bin/bash
-me=`basename "$0"`
-filename=${me##*.}
+FileName=${0##*/}
+filename=${FileName%.*}
 mkdir $filename
 cd $filename
 dotnet new mvc -o $filename
@@ -23,9 +23,3 @@ echo "public class Category
   public string CategoryName {get;set;}
   public string CategoryDescription {get;set;}
 }" >> Category.cs
-
-
-
-
-
-
